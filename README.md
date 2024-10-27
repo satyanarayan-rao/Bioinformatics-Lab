@@ -100,6 +100,15 @@ open IGV and select human (hg38) as genome. In File Menu, select `Load from file
 
 Once loaded type `chr9:9,998,492-9,998,642` and press `Go`. Let it load. Visualize and explore yourself.
 
-There are different ways to visualize alignments. For instance, just right click and go to the option "Color alignments by" and select "read strand". You will see then oritentation-wise coloring.
+There are different ways to visualize alignments. For instance, just right click and go to the option "Color alignments by" and select "read strand". You will see then oritentation-wise coloring. Also, do the "Group alignment by" -> "pair orientation". 
+
+You can see the coloring scheme in the example below and, I simply left-clicked on that overlapping reads to know more information about those read pairs. The ultimate message here to get comfortable with Visualization. You may have your data in future and may want to generate a figure for your region of interest. 
+
+For this paired read, you can say that the instert was completely sequenced as the length is less than 100 bp. Hence the overlapping reads. 
 
 ![bam_snapshot](./images/igv_for_explaining_bam_file.png)
+
+
+When you Zoom out (chr9:9,998,416-9,998,717), you will see reads are connected by thin line. It is saying that the bases are not determined for those insert segments, but because we know the reference genome, we can infer with the help of those paired-end sequences. See the image below. 
+
+![bam_long_insert](./images/igv_bam_long_inserts.png)
